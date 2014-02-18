@@ -25,6 +25,6 @@ module.exports = class JadeHandlebarsCompiler
       callback error, result
 
   include: [
-    (sysPath.join __dirname, '..', 'node_modules', "handlebars", "dist", "cjs",
+    (sysPath.join __dirname, '..', 'node_modules', "handlebars", "dist",
       'handlebars.runtime.js')
   ]
