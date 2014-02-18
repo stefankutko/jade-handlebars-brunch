@@ -26,5 +26,5 @@ module.exports = class JadeHandlebarsCompiler
 
   include: [
     (sysPath.join __dirname, '..', 'node_modules', "handlebars", "dist", "cjs",
-      'handlebars.runtime.min.js')
+      'handlebars.runtime.js')
   ]
