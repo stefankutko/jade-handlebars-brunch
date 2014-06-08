@@ -16,7 +16,7 @@ module.exports = class JadeHandlebarsCompiler
       jadeOutput = jade.compile data,
         compileDebug: no
         filename: path
-      
+
       content = handlebars.precompile jadeOutput()
       result = "module.exports = Handlebars.template(#{content});"
     catch err
@@ -25,6 +25,6 @@ module.exports = class JadeHandlebarsCompiler
       callback error, result
 
   include: [
-    (sysPath.join __dirname, '..', 'vendor',
-      'handlebars.runtime-1.0.rc.1.js')
+    (sysPath.join __dirname, '..', 'node_modules', "handlebars", "dist",
+      'handlebars.runtime.js')
   ]
